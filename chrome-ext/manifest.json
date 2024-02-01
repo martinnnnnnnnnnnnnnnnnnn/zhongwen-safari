@@ -1,0 +1,40 @@
+{
+   "author": "Christian Schiller",
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images/zhongwen48.png",
+      "default_title": "Zhongwen Chinese Popup Dictionary"
+   },
+   "commands": {
+      "_execute_browser_action": {
+         "description": "Enable/Disable Zhongwen"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery-3.3.1.min.js", "js/zhuyin.js", "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Great tool for learning Chinese. Includes links to Chinese Grammar Wiki. Supports adding words to Skritter.",
+   "homepage_url": "https://github.com/cschiller/zhongwen",
+   "icons": {
+      "128": "images/zhongwen.png",
+      "16": "images/zhongwen16.png",
+      "48": "images/zhongwen48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9kqvX6bQ05nYOOB67oitnTW6arQZbq/nLebcs8f2jwXM7cvZrkNaMtZroysYtDPFIES7yP4/SAsVP4CGKP7z/2o8/BBkqe+8+4Okk5bo23ovpGVSqGlpE63Q58Zkpl6j/GcVpHAlE5thNH7QmBjcAH5ESdt/o2iJaYDbImwthDwIDAQAB",
+   "manifest_version": 2,
+   "name": "Zhongwen: Chinese-English Dictionary",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "contextMenus", "tabs" ],
+   "short_name": "Zhongwen",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.15.0",
+   "web_accessible_resources": [ "css/*", "js/*", "images/*" ]
+}
